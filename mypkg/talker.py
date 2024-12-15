@@ -1,22 +1,31 @@
 import rclpy
 from rclpy.node import Node
-from person_msgs.msg import Person
+from std_msgs.msg import String
+import subprocess
+import time
+import re
 
-rclpy.init()
-node = Node("talker")
-pub = node.create_publisher(Person, "person", 10)
-n = 0
+class CalenderTalker(Node):
+    def __init__(self):
+        super().__init__('calender_talker')
+        self.pub = self.create_publisher(String, 'calender', 10)
+        self.timer = self.create_timer(1.0, self.timer_callback)
+        self.month = 11
+        self.year = 2004
 
-
-def cd():
-    global n
-    msg = Person()
-    msg.name = "藤村隆世"
-    msg.age = n
-    pub.publish(msg)
-    n += 1
-
+    def timer_callback(self):
+        command = ['cal', str(self.month), str(self.year)]
+        result = subprocess.run(command, capture_output=True, text=True)
+        calender = result.stdout
+        msg = String()
+        msg.data = calender
+        self.pub.publish(msg)
+        self.month += 1
+        if self.month > 12:
+            self.month = 1
+            self.year += 1
 
 def main():
-    node.create_timer(0.5, cd)
-    rclpy.spin(node)
+    rclpy.init()
+    calender_talker = CalenderTalker()
+    rclpy.spin(calender_talker)
