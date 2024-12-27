@@ -2,16 +2,15 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import subprocess
-import time
-import re
+#import time
 
 class CalenderTalker(Node):
     def __init__(self):
         super().__init__('calender_talker')
         self.pub = self.create_publisher(String, 'calender', 10)
         self.timer = self.create_timer(1.0, self.timer_callback)
-        self.month = 11
-        self.year = 2004
+        self.month = 1
+        self.year = 2025
 
     def timer_callback(self):
         command = ['cal', str(self.month), str(self.year)]
