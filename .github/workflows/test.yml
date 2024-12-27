@@ -6,6 +6,8 @@ jobs:
     container: ryuichiueda/ubuntu22.04-ros2:latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install cal command
+        run: sudo apt-get install -y bsdmainutils 
       - name: build and test
         run: |
           rsync -av ./ /root/ros2_ws/src/mypkg

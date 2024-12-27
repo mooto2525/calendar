@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import subprocess
-#import time
 
 class CalenderTalker(Node):
     def __init__(self):
