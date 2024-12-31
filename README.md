@@ -42,11 +42,12 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22
 23 24 25 26 27 28
 ```
+## テスト専用ディレクトリ
+* launch  
+* test  
 ## 動作環境
 * ubuntu 22.04.2 LTS
-  * ROS2 Humble  
-* テストに使用したファイル
-  * [launchファイル](https://github.com/mooto2525/ROS2_2.git/launch)
+  * ROS2 Humble   
 * テストに使用したコンテナ  
 上田准教授の[コンテナ](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)させていただきました。
 
