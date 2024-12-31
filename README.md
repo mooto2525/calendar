@@ -48,6 +48,7 @@ Su Mo Tu We Th Fr Sa
 ## 動作環境
 ### 必要なソフトウェア
 * python
+  * テスト済み：3.7~3.11
 ###テスト環境
 * ubuntu 22.04.2 LTS
   * ROS2 Humble   
