@@ -1,6 +1,6 @@
-# calendarコマンド
+# calendar
 [![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)
-このコードは/calendarというトピックに２０２５年1月からのカレンダーのデータを一か月分ずつ放出し、同時に流れるメッセージを確認するものになります。  
+calendarというノードがcalendarというトピックを通じて２０２５年1月からのカレンダーのデータを一か月分ずつ放出し、同時に流れるメッセージを確認するものになります。  
 
 ## 使用準備
 以下のコマンドを順にターミナルで実行  
@@ -19,6 +19,27 @@ Gitをインストール(Gitをインストールしていない方のみ)
 ```
 ros2 run mypkg calendar
 ```  
+実行結果  
+```
+[INFO] [1735656940.436907959] [calender_talker]: Receive calemdar data:
+    January 2025
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+
+[INFO] [1735656941.404341464] [calender_talker]: Receive calemdar data:
+   February 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28
+```
 ## 動作環境
 * ubuntu 22.04.2 LTS
   * ROS2 Humble
