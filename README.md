@@ -20,7 +20,8 @@ Gitをインストール(Gitをインストールしていない方のみ)
 ros2 run mypkg calendar
 ```  
 ## 動作環境
-- python
+* ubuntu 22.04.2 LTS
+  * ROS2 Humble
 
 ## ライセンス
   
