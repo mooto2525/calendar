@@ -6,12 +6,13 @@ import subprocess
 class CalenderTalker(Node):
     def __init__(self):
         super().__init__('calender_talker')
-        self.pub = self.create_publisher(String, 'calender', 10)
-        self.timer = self.create_timer(1.0, self.timer_callback)
+        self.pub = self.create_publisher(String, 'calendar', 10)
+        self.subscription = self.create_subscription(String, '/calendar', self.listener_callback, 10)
+        self.timer = self.create_timer(1.0, self.talker_callback)
         self.month = 1
         self.year = 2025
 
-    def timer_callback(self):
+    def talker_callback(self):
         command = ['cal', str(self.month), str(self.year)]
         result = subprocess.run(command, capture_output=True, text=True)
         calender = result.stdout
@@ -22,6 +23,9 @@ class CalenderTalker(Node):
         if self.month > 12:
             self.month = 1
             self.year += 1
+
+    def listener_callback(self,msg):
+        self.get_logger().info(f'Receive calendar data:\n{msg.data}')
 
 def main():
     rclpy.init()
