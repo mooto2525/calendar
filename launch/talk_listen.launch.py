@@ -6,10 +6,10 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    talker = launch_ros.actions.Node(
+    calendar = launch_ros.actions.Node(
         package='mypkg',
-        executable='talker',
+        executable='calendar',
         output='screen'
     )
 
-    return launch.LaunchDescription([talker])
+    return launch.LaunchDescription([calendar])

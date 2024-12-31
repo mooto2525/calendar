@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = mypkg.calendar:main',
+            'calendar = mypkg.calendar:main'
         ],
     },
 )
