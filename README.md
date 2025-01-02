@@ -49,10 +49,9 @@ Su Mo Tu We Th Fr Sa
 ### 必要なソフトウェア
 * python
   * テスト済み：3.7~3.11
-###テスト環境
+### テスト環境
 * ubuntu 22.04.2 LTS
   * ROS2 Humble
-
 ### テストに使用したコンテナ  
 上田准教授の[コンテナ](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)を使用させていただきました。
 
