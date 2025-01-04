@@ -14,7 +14,7 @@ Gitをインストール(Gitをインストールしていない方のみ)
 ```cd calendar_data/calendar_data```  
 移動できたか確認  
 ```ls```  
-```__init__.py  calendar.py```  
+```__init__.py  calendar.py  listener.py```  
 と表示されたらOK  
 実行権限を付与  
 ```chmod +x calendar.py```   
@@ -44,9 +44,10 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22
 23 24 25 26 27 28
 ```
-## テスト用ファイル
+## テスト用ファイル,ディレクトリ
 * launch  
 * test  
+* listener.py
 ## 動作環境
 ### 必要なソフトウェア
 * python
