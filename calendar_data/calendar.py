@@ -9,12 +9,12 @@ import subprocess
 class CalenderTalker(Node):
     def __init__(self):
         super().__init__('calender_talker')
-        self.pub = self.create_publisher(String, 'calendar', 10)
-        self.timer = self.create_timer(1.0, self.talker_callback)
+        self.pub = self.create_publisher(String, 'calender', 10)
+        self.timer = self.create_timer(1.0, self.timer_callback)
         self.month = 1
         self.year = 2025
 
-    def talker_callback(self):
+    def timer_callback(self):
         command = ['cal', str(self.month), str(self.year)]
         result = subprocess.run(command, capture_output=True, text=True)
         calender = result.stdout
