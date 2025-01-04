@@ -15,8 +15,8 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
-cat /tmp/mypkg.log | grep -A 10 "September 2025"
+timeout 10 ros2 launch calendar_data talk_listen.launch.py > /tmp/calendar.log
+cat /tmp/calendar.log | grep -A 10 "September 2025"
 
 [ "$res" = 0 ] && echo OK
 exit "$res"

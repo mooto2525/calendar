@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'mypkg'
+package_name = 'calendar_data'
 
 setup(
     name=package_name,
@@ -23,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'calendar = mypkg.calendar:main'
+            'calendar = calendar_data.calendar:main',
+            'listener = calendar_data.listener:main',
         ],
     },
 )

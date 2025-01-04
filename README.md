@@ -1,6 +1,6 @@
-# calendar
-[![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)
-calendarというノードがcalendarというトピックを通じて２０２５年1月からのカレンダーのデータを一か月分ずつ放出し、同時に流れるメッセージを確認するものになります。  
+# calendar_data
+[![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)  
+ROS2でcalendarというノードがcalendarというトピックを通じて2025年1月からのカレンダーのデータを一か月分ずつ放出し、同時に流れるメッセージを確認するものになります。  
 
 ## このリポジトリで使用可能なノード
 * calendar  
@@ -11,7 +11,7 @@ Gitをインストール(Gitをインストールしていない方のみ)
 リポジトリをクローン  
 ```git clone https://github.com/mooto2525/ROS2_2.git```  
 リポジトリを移動  
-```cd mypkg```  
+```cd calendar_data/calendar_data```  
 移動できたか確認  
 ```ls```  
 ```__init__.py  calendar.py```  
@@ -21,7 +21,7 @@ Gitをインストール(Gitをインストールしていない方のみ)
 ## 使用方法
 以下のコマンドをターミナル上で実行  
 ```
-ros2 run mypkg calendar
+ros2 run calendar_data calendar
 ```  
 実行結果  
 ```

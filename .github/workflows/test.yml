@@ -13,8 +13,8 @@ jobs:
         run: sudo apt-get install -y bsdmainutils 
       - name: build and test
         run: |
-          rsync -av ./ /root/ros2_ws/src/mypkg
+          rsync -av ./ /root/ros2_ws/src/calendar_data
           cd /root/ros2_ws
           rosdep update
           rosdep install -i --from-path src --rosdistro humble -y
-          bash -xv ./src/mypkg/test/test.bash /root
+          bash -xv ./src/calendar_data/test/test.bash /root
