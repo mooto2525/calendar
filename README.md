@@ -2,8 +2,11 @@
 [![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)  
 ROS2でcalendarというノードがcalendarというトピックを通じて2025年1月からのカレンダーのデータを一か月分ずつ放出するパッケージになります。 
 
-## このリポジトリで使用可能なノード
-* calendar  
+## ノード
+* calendar
+  * calコマンドを使用して1秒ごとにカレンダーのデータをトピックにパブリッシュする  
+* listener
+  * トピックからメッセージをサブスクライブする  
 ## 使用準備
 以下のコマンドを順にターミナルで実行 
 calをインストール  
