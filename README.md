@@ -1,6 +1,6 @@
 # calendar_data
 [![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)  
-ROS2でcalendarというノードがcalendarというトピックを通じて2025年1月からのカレンダーのデータを一か月分ずつ放出し、同時に流れるメッセージを確認するものになります。  
+ROS2でcalendarというノードがcalendarというトピックを通じて2025年1月からのカレンダーのデータを一か月分ずつ放出するパッケージになります。 
 
 ## このリポジトリで使用可能なノード
 * calendar  
@@ -23,40 +23,18 @@ Gitをインストール(Gitをインストールしていない方のみ)
 ```
 ros2 run calendar_data calendar
 ```  
-実行結果  
-```
-[INFO] [1735656940.436907959] [calender_talker]: Receive calemdar data:
-    January 2025
-Su Mo Tu We Th Fr Sa
-          1  2  3  4
- 5  6  7  8  9 10 11
-12 13 14 15 16 17 18
-19 20 21 22 23 24 25
-26 27 28 29 30 31
-
-
-[INFO] [1735656941.404341464] [calender_talker]: Receive calemdar data:
-   February 2025
-Su Mo Tu We Th Fr Sa
-                   1
- 2  3  4  5  6  7  8
- 9 10 11 12 13 14 15
-16 17 18 19 20 21 22
-23 24 25 26 27 28
-```
 ## テスト用ファイル,ディレクトリ
 * launch  
 * test  
 * listener.py
 ## 動作環境
 ### 必要なソフトウェア
-* python
-  * テスト済み：3.7~3.11
+* python  
 ### テスト環境
 * ubuntu 22.04.2 LTS
   * ROS2 Humble
 ### テストに使用したコンテナ  
-上田准教授の[コンテナ](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)を使用させていただきました。
+上田教授の[コンテナ](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)を使用させていただきました。
 
 ## ライセンス
   
