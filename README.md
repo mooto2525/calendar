@@ -5,19 +5,17 @@ ROS2でcalendarというノードがcalendarというトピックを通じて202
 ## このリポジトリで使用可能なノード
 * calendar  
 ## 使用準備
-以下のコマンドを順にターミナルで実行  
+以下のコマンドを順にターミナルで実行 
+calをインストール  
+```sudo apt install ncal```  
 Gitをインストール(Gitをインストールしていない方のみ)  
 ```sudo apt-get install git```  
-リポジトリをクローン  
+各自のワーキングディレクトリに移動し、リポジトリをクローン  
 ```git clone https://github.com/mooto2525/ROS2_2.git```  
-リポジトリを移動  
-```cd calendar_data/calendar_data```  
-移動できたか確認  
-```ls```  
-```__init__.py  calendar.py  listener.py```  
-と表示されたらOK  
-実行権限を付与  
-```chmod +x calendar.py```   
+パッケージをビルド  
+```colcon build```  
+ビルド後の環境を適用  
+```source ~/.bashrc```  
 ## 使用方法
 以下のコマンドをターミナル上で実行  
 ```
