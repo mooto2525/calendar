@@ -1,33 +1,25 @@
 # calendar_data
 [![test](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml/badge.svg)](https://github.com/mooto2525/ROS2_2/actions/workflows/test.yml)  
-ROS2でcalendarというノードがcalendarというトピックを通じて2025年1月からのカレンダーのデータを一か月分ずつ放出するパッケージになります。 
-
-## ノード
+このROS2パッケージは、2025年1月からのカレンダーを表示する  
+## ノード概要
 * calendar
   * calコマンドを使用して1秒ごとにカレンダーのデータをトピックにパブリッシュする  
-* listener
-  * トピックからメッセージをサブスクライブする  
-## 使用準備
-以下のコマンドを順にターミナルで実行 
-calをインストール  
-```sudo apt install ncal```  
-Gitをインストール(Gitをインストールしていない方のみ)  
-```sudo apt-get install git```  
-各自のワーキングディレクトリに移動し、リポジトリをクローン  
-```git clone https://github.com/mooto2525/ROS2_2.git```  
-パッケージをビルド  
-```colcon build```  
-ビルド後の環境を適用  
-```source ~/.bashrc```  
-## 使用方法
-以下のコマンドをターミナル上で実行  
-```
-ros2 run calendar_data calendar
-```  
-## テスト用ファイル,ディレクトリ
-* launch  
-* test  
-* listener.py
+* listener  
+  * テスト用  
+  * トピックからのメッセージをサブスクライブする  
+## トピック概要  
+* トピック名:`calendar`  
+* メッセージの型:`String`  
+## 実行方法  
+- 実行方法1  
+2つの端末で実行  
+  -　端末1  
+`ros2 run calendar_data calendar`  
+  - 端末2  
+`ros2 run calendar_data listener`  
+- 実行方法2  
+launchファイルを使用して1つの端末で実行  
+`ros2 launch calendar_data talk_listen.launch.py`  
 ## 動作環境
 ### 必要なソフトウェア
 * python  
