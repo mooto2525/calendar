@@ -13,7 +13,7 @@
 ## 実行方法  
 - 実行方法1  
 2つの端末で実行  
-  -　端末1  
+  - 端末1  
 `ros2 run calendar_data calendar`  
   - 端末2  
 `ros2 run calendar_data listener`  
